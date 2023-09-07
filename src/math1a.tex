@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[a4paper,hmargin=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage[paperwidth=148mm,paperheight=210mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage[shortlabels,inline]{enumitem}
@@ -13,11 +13,16 @@
 \usepackage{pgfplots}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
+\usepackage{needspace}
+
+\pretolerance=5000
+\tolerance=9000
+\emergencystretch=10pt
 
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
-\cfoot{\thepage\ /\ \pageref{LastPage}}
+\cfoot{\footnotesize\thepage\ /\ \pageref{LastPage}}
 \setlength{\parindent}{0pt}
 \setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
 %\setCJKmainfont{AR PL UKai TW}
@@ -31,23 +36,24 @@
 
 \usepackage{titlesec}
 \usepackage{zhnumber}
-\titleformat{\section}{\normalfont\bfseries}{\thesection{、}}{0em}{}
+\titleformat{\section}{\needspace{5\baselineskip}\normalfont\bfseries}{\thesection{、}}{0em}{}
 \renewcommand{\thesection}{\zhnum{section}}
 
-\title{高一上學期數學科第一次期中考範圍模擬試題}
+\title{高一上第一次期中考數學科模擬試題}
 \makeatletter
 \renewcommand*{\maketitle}{{%
-  \renewcommand{\CJKglue}{\hskip.3em minus .3em}%
-  \LARGE\bfseries\@title\par
+  \bfseries
+  \LARGE 數學科段考複習試題 \\
+  \large 高一上第一次期中考範圍 \par
 }}
 \makeatother
 
 \begin{document}
 \maketitle
-\section{單一選擇題}
+\section{單一選擇題（10\%）}
 \begin{enumerate}[align=left,leftmargin=*,labelsep=.6em]
   \item 將 $\fraction{5}{37}$ 化為小數後，其小數點後第 2023 位數字為何？
-  \begin{choices}{5}
+  \begin{choices}{3}
     \item 1
     \item 2
     \item 3
@@ -55,7 +61,7 @@
     \item 5
   \end{choices}
   \item 已知 $a = \fraction{2\sqrt{11}+\sqrt{13}}{3}$，$b = \fraction{3\sqrt{11}+2\sqrt{13}}{5}$，$c = \fraction{4\sqrt{11}+3\sqrt{13}}{7}$，則 $a$、$b$、$c$ 的大小關係為何？
-  \begin{choices}{5}
+  \begin{choices}{3}
     \item $a < b < c$
     \item $a < c < b$
     \item $b < a < c$
@@ -64,11 +70,10 @@
   \end{choices}
 \end{enumerate}
 
-
-\section{多重選擇題}
+\section{多重選擇題（20\%）}
 \begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,resume]
   \item 若 $x$、$y$ 兩實數滿足 $-1 \leq x \leq 3$ 與 $2 \leq y \leq 4$，則下列敘述何者正確？
-  \begin{choices}{3}
+  \begin{choices}{2}
     \item $1 \leq x + y \leq 7$
     \item $-5 \leq x - y \leq 1$
     \item $-2 \leq xy \leq 12$
@@ -77,7 +82,7 @@
   \end{choices}
 \end{enumerate}
 
-\section{填充題}
+\section{填充題（40\%）}
 \begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.6em]
   \item $(\sqrt[3]{25}+\sqrt[3]{5}+1)(\sqrt[3]{5}-1) = \blank{8em}$。
   \item 數線上有 $A(-5)$、$B(11)$、$C(c)$ 三點，若 $\overline{AC}:\overline{BC} = 3:5$，則 $c = \blank{8em}$。
