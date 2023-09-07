@@ -19,7 +19,8 @@
 \fancyhead{}
 \cfoot{\thepage\ /\ \pageref{LastPage}}
 \setlength{\parindent}{0pt}
-\setCJKmainfont{Noto Serif CJK TC}
+\setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
+%\setCJKmainfont{AR PL UKai TW}
 \linespread{1.15}
 
 \usepackage{tabto}
@@ -37,7 +38,7 @@
 \makeatletter
 \renewcommand*{\maketitle}{{%
   \renewcommand{\CJKglue}{\hskip.3em minus .3em}%
-  \LARGE\@title\par
+  \LARGE\bfseries\@title\par
 }}
 \makeatother
 
