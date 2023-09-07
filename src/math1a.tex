@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,hmargin=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{xeCJKfntef}
+\usepackage{pgfplots}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\cfoot{\thepage\ /\ \pageref{LastPage}}
+\setlength{\parindent}{0pt}
+\setCJKmainfont{Noto Serif CJK TC}
+\linespread{1.15}
+
+\usepackage{tabto}
+\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+
+\newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
+\newcommand*{\fraction}[2]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\dfrac{#1}{#2}}
+
+\usepackage{titlesec}
+\usepackage{zhnumber}
+\titleformat{\section}{\normalfont\bfseries}{\thesection{、}}{0em}{}
+\renewcommand{\thesection}{\zhnum{section}}
+
+\title{高一上學期數學科第一次期中考範圍模擬試題}
+\makeatletter
+\renewcommand*{\maketitle}{{%
+  \renewcommand{\CJKglue}{\hskip.3em minus .3em}%
+  \LARGE\@title\par
+}}
+\makeatother
+
+\begin{document}
+\maketitle
+\section{單一選擇題}
+\begin{enumerate}[align=left,leftmargin=*,labelsep=.6em]
+  \item 將 $\fraction{5}{37}$ 化為小數後，其小數點後第 2023 位數字為何？
+  \begin{choices}{5}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+    \item 5
+  \end{choices}
+  \item 已知 $a = \fraction{2\sqrt{11}+\sqrt{13}}{3}$，$b = \fraction{3\sqrt{11}+2\sqrt{13}}{5}$，$c = \fraction{4\sqrt{11}+3\sqrt{13}}{7}$，則 $a$、$b$、$c$ 的大小關係為何？
+  \begin{choices}{5}
+    \item $a < b < c$
+    \item $a < c < b$
+    \item $b < a < c$
+    \item $c < a < b$
+    \item $c < b < a$
+  \end{choices}
+\end{enumerate}
+
+
+\section{多重選擇題}
+\begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,resume]
+  \item 若 $x$、$y$ 兩實數滿足 $-1 \leq x \leq 3$ 與 $2 \leq y \leq 4$，則下列敘述何者正確？
+  \begin{choices}{3}
+    \item $1 \leq x + y \leq 7$
+    \item $-5 \leq x - y \leq 1$
+    \item $-2 \leq xy \leq 12$
+    \item $3 \leq \lvert x \rvert + \lvert y \rvert \leq 7$
+    \item $2 \leq \sqrt{x^2 + y^2} \leq 5$
+  \end{choices}
+\end{enumerate}
+
+\section{填充題}
+\begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.6em]
+  \item $(\sqrt[3]{25}+\sqrt[3]{5}+1)(\sqrt[3]{5}-1) = \blank{8em}$。
+  \item 數線上有 $A(-5)$、$B(11)$、$C(c)$ 三點，若 $\overline{AC}:\overline{BC} = 3:5$，則 $c = \blank{8em}$。
+  \item 設 $\sqrt{11+4\sqrt{7}}$ 的整數部分為 $a$，小數部分為 $b$，則 $\fraction{1}{b} - \fraction{1}{a+b} = \blank{8em}$。
+  \item 已知 $x$、$y$ 兩實數滿足 $67^x = 27$ 與 $603^y = 81$，則 $\fraction{3}{x} - \fraction{4}{y} = \blank{8em}$。
+  \item 設 $y = 5^x + 5^{1-x}$，其中 $x$ 為實數。若在 $x = a$ 時，$y$ 具有最小值 $b$，則數對 $(a, b)$ 為 \blank{8em}。
+\end{enumerate}
+\end{document}
