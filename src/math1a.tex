@@ -32,26 +32,28 @@
 \newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
 
 \newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
-\newcommand*{\fraction}[2]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
 
 \usepackage{titlesec}
 \usepackage{zhnumber}
-\titleformat{\section}{\needspace{5\baselineskip}\normalfont\bfseries}{\thesection{、}}{0em}{}
+\titleformat{\section}{\normalfont\bfseries}{\thesection{、}}{0em}{}
+\titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
 \renewcommand{\thesection}{\zhnum{section}}
 
-\title{高一上第一次期中考數學科模擬試題}
+%\title{高一上第一次期中考數學科模擬試題}
 \makeatletter
 \renewcommand*{\maketitle}{{%
   \bfseries
-  \LARGE 數學科段考複習試題 \\
-  \large 高一上第一次期中考範圍 \par
+  \LARGE 練習題 \\
+  \large 範圍：實數、絕對值、指數、常用對數 \par
 }}
 \makeatother
 
 \begin{document}
 \maketitle
-\section{單一選擇題（15\%）}
+\section{單選題}
 \begin{enumerate}[align=left,leftmargin=*,labelsep=.6em]
+  \needspace{3\baselineskip}
   \item 將 $\fraction{5}{37}$ 化為小數後，其小數點後第 2023 位數字為何？
   \begin{choices}{3}
     \item 1
@@ -60,6 +62,7 @@
     \item 4
     \item 5
   \end{choices}
+  \needspace{5\baselineskip}
   \item 已知 $a = \fraction{2\sqrt{11}+\sqrt{13}}{3}$，$b = \fraction{3\sqrt{11}+2\sqrt{13}}{5}$，$c = \fraction{4\sqrt{11}+3\sqrt{13}}{7}$，則 $a$、$b$、$c$ 的大小關係為何？
   \begin{choices}{3}
     \item $a < b < c$
@@ -68,26 +71,123 @@
     \item $c < a < b$
     \item $c < b < a$
   \end{choices}
+  \needspace{3\baselineskip}
+  \item 若 $\log(\log a) = -1$，則 $(0.1)^{0.1}$ 與下列何者相等？
+  \begin{choices}{3}
+    \item $a$
+    \item $\fraction{1}{a}$
+    \item $\fraction{a}{10}$
+    \item $\fraction{10}{a}$
+    \item $\fraction{1}{10a}$
+  \end{choices}
 \end{enumerate}
 
-\section{多重選擇題（25\%）}
+\needspace{8\baselineskip}
+\section{多選題}
 \begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,resume]
+  \item 下列敘述何者正確？
+  \begin{choices}{1}
+    \item 若 $x$ 為有理數，則 $x^2$ 為有理數
+    \item 若 $x$ 為無理數，則 $x^2$ 為無理數
+    \item 若 $x^2$ 與 $x^3$ 皆為有理數，則 $x$ 為有理數
+    \item 若 $x+y$ 與 $x-y$ 皆為有理數，則 $x$ 與 $y$ 皆為有理數
+    \item 若 $x+y$ 與 $xy$ 皆為有理數，則 $x$ 與 $y$ 皆為有理數
+  \end{choices}
+  \needspace{6\baselineskip}
   \item 若 $x$、$y$ 兩實數滿足 $-1 \leq x \leq 3$ 與 $2 \leq y \leq 4$，則下列敘述何者正確？
-  \begin{choices}{2}
+  \begin{choices}{1}
     \item $1 \leq x + y \leq 7$
     \item $-5 \leq x - y \leq 1$
     \item $-2 \leq xy \leq 12$
     \item $3 \leq \lvert x \rvert + \lvert y \rvert \leq 7$
-    \item $2 \leq \sqrt{x^2 + y^2} \leq 5$
+    \item $4 \leq x^2 + y^2 \leq 25$
+  \end{choices}
+  \needspace{6\baselineskip}
+  \item 已知 $0.3010 < \log 2 < 0.3011$。下列敘述何者正確？
+  \begin{choices}{1}
+    \item $10^{\log 2} > 1$
+    \item $10^{0.3} < 2$
+    \item $10^{0.7} < 5$
+    \item $2^{100}$ 為 30 位數
+    \item $2^{-100}$ 在小數點後第 30 位開始不為 0
   \end{choices}
 \end{enumerate}
 
-\section{填充題（40\%）}
+\needspace{10\baselineskip}
+\section{填充題}
 \begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.6em]
+  \needspace{3\baselineskip}
   \item $(\sqrt[3]{25}+\sqrt[3]{5}+1)(\sqrt[3]{5}-1) = \blank{8em}$。
+  \needspace{3\baselineskip}
   \item 數線上有 $A(-5)$、$B(11)$、$C(c)$ 三點，若 $\overline{AC}:\overline{BC} = 3:5$，則 $c = \blank{8em}$。
+  \needspace{3\baselineskip}
+  \item 不等式 $\lvert 2x + 3 \rvert \leq \lvert x - 1 \rvert$ 之解為 \blank{10em}。
+  \needspace{3\baselineskip}
+  \item 若不等式 $\lvert ax + 4 \rvert \geq b$ 的解為 $x \leq -1$ 或 $x \geq 9$，則數對 $(a, b)$ 為 \blank{8em}。
+  \needspace{3\baselineskip}
+  \item 若 $0 < a < 1$ 且 $a + a^{-1} = 7$，則 $a^3 + a^{-3} = \blank{8em}$，$a - a^{-1} = \blank{8em}$。
+  \needspace{3\baselineskip}
   \item 設 $\sqrt{11+4\sqrt{7}}$ 的整數部分為 $a$，小數部分為 $b$，則 $\fraction{1}{b} - \fraction{1}{a+b} = \blank{8em}$。
-  \item 已知 $x$、$y$ 兩實數滿足 $67^x = 27$ 與 $603^y = 81$，則 $\fraction{3}{x} - \fraction{4}{y} = \blank{8em}$。
+  \needspace{3\baselineskip}
+  \item 已知 $x$、$y$ 兩實數滿足 $7^x = 27$ 與 $63^y = 81$，則 $\fraction{3}{x} - \fraction{4}{y} = \blank{8em}$。
+  \needspace{3\baselineskip}
   \item 設 $y = 5^x + 5^{1-x}$，其中 $x$ 為實數。若在 $x = a$ 時，$y$ 具有最小值 $b$，則數對 $(a, b)$ 為 \blank{8em}。
+  \needspace{3\baselineskip}
+  \item 若一放射性物質的半衰期為 $T$，則每經過時間 $T$，該物質的質量會衰退為原來的一半。已知在一實驗開始時，A、B 兩種放射性物質的質量相同，且經過 72 小時後，物質 A、B 的質量比變為 $1:4$。若物質 A 的半衰期為 12 小時，則物質 B 的半衰期為 \blank{8em} 小時。
+\end{enumerate}
+
+\needspace{5\baselineskip}
+\section{混合題}
+\begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,parsep=0ex]
+  \item 已知 $\sqrt{2}$ 為無理數。
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
+    \item 試證明 $2\sqrt{2}$ 為無理數。
+    \item 試證明 $\sqrt[4]{2}$ 為無理數。
+  \end{enumerate}
+  \needspace{6\baselineskip}
+  \item 一實驗需要在培養皿中培養細菌，原先培養皿中共有 $6 \times 10^4$ 個細菌。已知經過 $k$ 日後，細菌數會變為原先的 $c^k$ 倍。
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
+    \item 若經過 8 日後，培養皿中共有 $9.6 \times 10^5$ 個細菌，則 $c$ 之值為何？
+    \item 承 (1)，從開始培養起算，經過幾日後培養皿中的細菌數會達到 $3.84 \times 10^6$？
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+{\bfseries\large 答案 \par}
+\section*{選擇題}
+\NumTabs{3}
+\begin{enumerate*}[label=\arabic*.,itemjoin=\tab]
+  \item (A)
+  \item (A)
+  \item (B)
+  \item (A)(C)(D)
+  \item (A)(B)(E)
+  \item (A)(B)
+\end{enumerate*}
+\section*{填充題}
+\NumTabs{3}
+\begin{enumerate*}[label=\Alph*.,itemjoin=\tab]
+  \item 4
+  \item $-29$ 或 $1$
+  \item $-4 \leq x \leq -\fraction{2}{3}$
+  \item $(-1,5)$
+  \item $322$；$-3\sqrt{5}$
+  \item $\fraction{4}{3}$
+  \item $\fraction{1}{9}$
+  \item $\biggl(\fraction{1}{2}, 2\sqrt{5}\biggr)$
+  \item 18
+\end{enumerate*}
+\section*{混合題}
+\begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,parsep=0ex]
+  \item
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
+    \item 若 $2\sqrt{2}$ 為有理數，則 $2\sqrt{2} \times \fraction{1}{2} = \sqrt{2}$ 為有理數，矛盾。故 $2\sqrt{2}$ 為無理數。
+    \item 若 $\sqrt[4]{2}$ 為有理數，則 $\sqrt[4]{2} \times \sqrt[4]{2} = \sqrt{2}$ 為有理數，矛盾。故 $\sqrt[4]{2}$ 為無理數。
+  \end{enumerate}
+  \item
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
+    \item $\sqrt{2}$
+    \item 12
+  \end{enumerate}
 \end{enumerate}
 \end{document}

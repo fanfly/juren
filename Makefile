@@ -8,6 +8,8 @@ all: $(OBJS)
 target/%.pdf: build/%.pdf
 	mkdir -p target
 	cp $< $@
+	rm -f $(basename $@)*.png
+	gm convert -density 600 +adjoin $@ $(basename $@)-%03d.png
 
 build/%.pdf: src/%.tex
 	mkdir -p build
