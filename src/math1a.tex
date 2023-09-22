@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[paperwidth=148mm,paperheight=210mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
+\usepackage[paperwidth=105mm,paperheight=148mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage[shortlabels,inline]{enumitem}
@@ -25,137 +25,134 @@
 \cfoot{\footnotesize\thepage\ /\ \pageref{LastPage}}
 \setlength{\parindent}{0pt}
 \setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
-%\setCJKmainfont{AR PL UKai TW}
 \linespread{1.15}
 
 \usepackage{tabto}
-\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+\newenvironment{choice}{\begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em,topsep=0ex,itemsep=0ex]}{\end{enumerate}}
+%\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
 
 \newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
 \newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\sfraction}[2]{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\tfrac{#1}{#2}}
 
 \usepackage{titlesec}
 \usepackage{zhnumber}
-\titleformat{\section}{\normalfont\bfseries}{\thesection{、}}{0em}{}
+\titleformat{\section}{\normalfont\bfseries}{{\thesection}、}{0em}{}
 \titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
 \renewcommand{\thesection}{\zhnum{section}}
 
-%\title{高一上第一次期中考數學科模擬試題}
 \makeatletter
 \renewcommand*{\maketitle}{{%
   \bfseries
-  \LARGE 練習題 \\
-  \large 範圍：實數、絕對值、指數、常用對數 \par
+  \LARGE 練習（數學） \\
+  \large 實數、絕對值、指數、常用對數 \par
 }}
 \makeatother
 
 \begin{document}
 \maketitle
-\section{單選題}
+\section{選擇題}
 \begin{enumerate}[align=left,leftmargin=*,labelsep=.6em]
   \needspace{3\baselineskip}
-  \item 將 $\fraction{5}{37}$ 化為小數後，其小數點後第 2023 位數字為何？
-  \begin{choices}{3}
+  \item 將 $\fraction{5}{37}$ 化為小數後，其小數點後第 2023 位數字為何？（單選）
+  \begin{choice}
     \item 1
     \item 2
     \item 3
     \item 4
     \item 5
-  \end{choices}
-  \needspace{5\baselineskip}
-  \item 已知 $a = \fraction{2\sqrt{11}+\sqrt{13}}{3}$，$b = \fraction{3\sqrt{11}+2\sqrt{13}}{5}$，$c = \fraction{4\sqrt{11}+3\sqrt{13}}{7}$，則 $a$、$b$、$c$ 的大小關係為何？
-  \begin{choices}{3}
+  \end{choice}
+  \newpage
+  \item 已知 $a = \fraction{2\sqrt{11}+\sqrt{13}}{3}$，$b = \fraction{3\sqrt{11}+2\sqrt{13}}{5}$，$c = \fraction{4\sqrt{11}+3\sqrt{13}}{7}$，則 $a$、$b$、$c$ 的大小關係為何？（單選）
+  \begin{choice}
     \item $a < b < c$
     \item $a < c < b$
     \item $b < a < c$
     \item $c < a < b$
     \item $c < b < a$
-  \end{choices}
-  \needspace{3\baselineskip}
-  \item 若 $\log(\log a) = -1$，則 $(0.1)^{0.1}$ 與下列何者相等？
-  \begin{choices}{3}
+  \end{choice}
+  \newpage
+  \item 若 $\log(\log a) = -1$，則 $(0.1)^{0.1}$ 與下列何者相等？（單選）
+  \begin{choice}
     \item $a$
     \item $\fraction{1}{a}$
     \item $\fraction{a}{10}$
     \item $\fraction{10}{a}$
     \item $\fraction{1}{10a}$
-  \end{choices}
-\end{enumerate}
-
-\needspace{8\baselineskip}
-\section{多選題}
-\begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,resume]
-  \item 下列敘述何者正確？
-  \begin{choices}{1}
+  \end{choice}
+  \newpage
+  \item 下列敘述何者正確？（多選）
+  \begin{choice}
     \item 若 $x$ 為有理數，則 $x^2$ 為有理數
     \item 若 $x$ 為無理數，則 $x^2$ 為無理數
     \item 若 $x^2$ 與 $x^3$ 皆為有理數，則 $x$ 為有理數
     \item 若 $x+y$ 與 $x-y$ 皆為有理數，則 $x$ 與 $y$ 皆為有理數
     \item 若 $x+y$ 與 $xy$ 皆為有理數，則 $x$ 與 $y$ 皆為有理數
-  \end{choices}
-  \needspace{6\baselineskip}
-  \item 若 $x$、$y$ 兩實數滿足 $-1 \leq x \leq 3$ 與 $2 \leq y \leq 4$，則下列敘述何者正確？
-  \begin{choices}{1}
+  \end{choice}
+  \newpage
+  \item 若 $x$、$y$ 兩實數滿足 $-1 \leq x \leq 3$ 與 $2 \leq y \leq 4$，則下列敘述何者正確？（多選）
+  \begin{choice}
     \item $1 \leq x + y \leq 7$
     \item $-5 \leq x - y \leq 1$
     \item $-2 \leq xy \leq 12$
     \item $3 \leq \lvert x \rvert + \lvert y \rvert \leq 7$
     \item $4 \leq x^2 + y^2 \leq 25$
-  \end{choices}
-  \needspace{6\baselineskip}
-  \item 已知 $0.3010 < \log 2 < 0.3011$，試問下列敘述何者正確？
-  \begin{choices}{1}
+  \end{choice}
+  \newpage
+  \item 已知 $\log 2 \approx 0.3010$，則下列敘述何者正確？（多選）
+  \begin{choice}
     \item $10^{\log 2} > 1$
     \item $10^{0.3} < 2$
     \item $10^{0.7} < 5$
     \item $2^{100}$ 為 30 位數
     \item $2^{-100}$ 在小數點後第 30 位開始不為 0
-  \end{choices}
+  \end{choice}
 \end{enumerate}
 
-\needspace{10\baselineskip}
+\newpage
 \section{填充題}
-\begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.6em]
-  \needspace{3\baselineskip}
-  \item $(\sqrt[3]{25}+\sqrt[3]{5}+1)(\sqrt[3]{5}-1) = \blank{8em}$。
-  \needspace{3\baselineskip}
-  \item 數線上有 $A(-5)$、$B(11)$、$C(c)$ 三點，若 $\overline{AC}:\overline{BC} = 3:5$，則 $c = \blank{8em}$。
-  \needspace{3\baselineskip}
-  \item 不等式 $\lvert 2x + 3 \rvert \leq \lvert x - 1 \rvert$ 之解為 \blank{10em}。
-  \needspace{3\baselineskip}
-  \item 若不等式 $\lvert ax + 4 \rvert \geq b$ 的解為 $x \leq -1$ 或 $x \geq 9$，則數對 $(a, b)$ 為 \blank{8em}。
-  \needspace{3\baselineskip}
-  \item 若 $0 < a < 1$ 且 $a + a^{-1} = 7$，則 $a^3 + a^{-3} = \blank{8em}$，$a - a^{-1} = \blank{8em}$。
-  \needspace{3\baselineskip}
-  \item 設 $\sqrt{11+4\sqrt{7}}$ 的整數部分為 $a$，小數部分為 $b$，則 $\fraction{1}{b} - \fraction{1}{a+b} = \blank{8em}$。
-  \needspace{3\baselineskip}
-  \item 已知 $x$、$y$ 兩實數滿足 $7^x = 27$ 與 $63^y = 81$，則 $\fraction{3}{x} - \fraction{4}{y} = \blank{8em}$。
-  \needspace{3\baselineskip}
-  \item 設 $y = 5^x + 5^{1-x}$，其中 $x$ 為實數。若在 $x = a$ 時，$y$ 具有最小值 $b$，則數對 $(a, b)$ 為 \blank{8em}。
-  \needspace{3\baselineskip}
-  \item 若一放射性物質的半衰期為 $T$，則每經過時間 $T$，該物質的質量會衰退為原來的一半。已知在一實驗開始時，A、B 兩種放射性物質的質量相同，且經過 72 小時後，物質 A、B 的質量比變為 $1:4$。若物質 A 的半衰期為 12 小時，則物質 B 的半衰期為 \blank{8em} 小時。
+\begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.3em]
+  \item 化簡 $(\sqrt[3]{25}+\sqrt[3]{5}+1)(\sqrt[3]{5}-1) = \blank{5em}$ 與 $\sqrt{(\sqrt{35}-6)^2} = \blank{5em}$。
+  \newpage
+  \item 設 $a > 0$，若 $\biggl(\fraction{\sqrt[3]{a^4} \cdot \sqrt[6]{a}}{a^{-1}}\biggr)^{\sfraction{1}{5}} = a^m$，則 $m = \blank{5em}$。
+  \newpage
+  \item 數線上有 $A(-5)$、$B(11)$、$C(c)$ 三點，若 $\overline{AC}:\overline{BC} = 3:5$，則 $c = \blank{5em}$。
+  \newpage
+  \item 不等式 $\lvert 2x + 3 \rvert \leq \lvert x - 1 \rvert$ 之解為 \blank{8em}。
+  \newpage
+  \item 若不等式 $\lvert ax + 4 \rvert \geq b$ 的解為 $x \leq -1$ 或 $x \geq 9$，則數對 $(a, b)$ 為 \blank{5em}。
+  \newpage
+  \item 若 $0 < a < 1$ 且 $a + a^{-1} = 7$，則 $a^3 + a^{-3} = \blank{5em}$，$a - a^{-1} = \blank{5em}$。
+  \newpage
+  \item 設 $\sqrt{11+4\sqrt{7}}$ 的整數部分為 $a$，小數部分為 $b$，則 $\fraction{1}{b} - \fraction{1}{a+b} = \blank{5em}$。
+  \newpage
+  \item 已知 $x$、$y$ 兩實數滿足 $7^x = 27$ 與 $63^y = 81$，則 $\fraction{3}{x} - \fraction{4}{y} = \blank{5em}$。
+  \newpage
+  \item 設 $y = 5^x + 5^{1-x}$，其中 $x$ 為實數。若在 $x = a$ 時，$y$ 具有最小值 $b$，則數對 $(a, b)$ 為 \blank{5em}。
+  \newpage
+  \item 若一放射性物質的半衰期為 $T$，則每經過時間 $T$，該物質的質量會衰退為原來的一半。已知在一實驗開始時，A、B 兩種放射性物質的質量相同，且經過 72 小時後，物質 A、B 的質量比變為 $1:4$。若物質 A 的半衰期為 12 小時，則物質 B 的半衰期為 \blank{5em} 小時。
 \end{enumerate}
 
-\needspace{5\baselineskip}
-\section{非選題}
+\newpage
+\section{計算證明題}
 \begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,parsep=0ex]
   \item 已知 $\sqrt{2}$ 為無理數。
   \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
     \item 試證明 $2\sqrt{2}$ 為無理數。
     \item 試證明 $\sqrt[4]{2}$ 為無理數。
   \end{enumerate}
-  \needspace{6\baselineskip}
-  \item 考慮一培養細菌之實驗，在實驗開始時培養皿中共有 $6 \times 10^4$ 個細菌。已知每經過 $1$ 日，細菌數會變為前一日的 $c$ 倍，其中 $c$ 為一常數。
+  \newpage
+  \item 有一位生物學家想在培養皿中培養細菌，以觀察細菌增長的速率。已知實驗開始時，培養皿中共有 $6 \times 10^4$ 個細菌，且每經過 $1$ 日，細菌數會變為前一日的 $c$ 倍，其中 $c$ 為一常數。
   \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
-    \item 若自實驗開始經過 8 日後，培養皿中共有 $9.6 \times 10^5$ 個細菌，則 $c$ 之值為何？
-    \item 承 (1)，若自實驗開始經過 $k$ 日後，培養皿中共有 $3.84 \times 10^6$ 個細菌，則 $k$ 之值為何？
+    \item 若實驗開始 8 日後培養皿中共有 $9.6 \times 10^5$ 個細菌，則 $c$ 之值為何？
+    \item 承 (1)，若實驗開始 $k$ 日後培養皿中共有 $3.84 \times 10^6$ 個細菌，則 $k$ 之值為何？
   \end{enumerate}
 \end{enumerate}
 
 \newpage
 {\bfseries\large 答案 \par}
 \section*{選擇題}
-\NumTabs{3}
+\NumTabs{2}
 \begin{enumerate*}[label=\arabic*.,itemjoin=\tab]
   \item (A)
   \item (A)
@@ -165,9 +162,10 @@
   \item (A)(B)
 \end{enumerate*}
 \section*{填充題}
-\NumTabs{3}
+\NumTabs{2}
 \begin{enumerate*}[label=\Alph*.,itemjoin=\tab]
-  \item 4
+  \item 4；$6-\sqrt{35}$
+  \item $\fraction{1}{2}$
   \item $-29$ 或 $1$
   \item $-4 \leq x \leq -\fraction{2}{3}$
   \item $(-1,5)$
@@ -177,17 +175,9 @@
   \item $\biggl(\fraction{1}{2}, 2\sqrt{5}\biggr)$
   \item 18
 \end{enumerate*}
-\section*{非選題}
-\begin{enumerate}[align=left,leftmargin=*,labelsep=.6em,parsep=0ex]
-  \item
-  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
-    \item 若 $2\sqrt{2}$ 為有理數，則 $2\sqrt{2} \times \fraction{1}{2} = \sqrt{2}$ 為有理數，矛盾。故 $2\sqrt{2}$ 為無理數。
-    \item 若 $\sqrt[4]{2}$ 為有理數，則 $\sqrt[4]{2} \times \sqrt[4]{2} = \sqrt{2}$ 為有理數，矛盾。故 $\sqrt[4]{2}$ 為無理數。
-  \end{enumerate}
-  \item
-  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.4em]
-    \item $\sqrt{2}$
-    \item 12
-  \end{enumerate}
+\section*{計算證明題}
+\begin{enumerate}[align=left,leftmargin=*,labelsep=.3em,parsep=0ex,itemsep=0ex]
+  \item (1) 略 \quad (2) 略
+  \item (1) $\sqrt{2}$ \quad (2) 12
 \end{enumerate}
 \end{document}
