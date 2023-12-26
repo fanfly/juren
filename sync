@@ -1,0 +1,3 @@
+#!/bin/sh
+cd "$(dirname "$(realpath "$0")")" || exit
+rsync -azv -e 'ssh -p 1365' --delete target/ fanfly@fanfly.me:~/juren/
