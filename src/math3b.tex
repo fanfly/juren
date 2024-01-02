@@ -68,9 +68,8 @@
       \tikzset{axis/.style={->,>=latex}}
       \begin{scope}
         \clip (-5,-5) rectangle (5,5);
-        \draw[smooth,samples=100,domain=-5:5] plot (\x,{((\x*\x-7)*\x-6)/3});
+        \draw[smooth,samples=100,domain=-5:5,semithick] plot (\x,{((\x*\x-7)*\x-6)/3});
       \end{scope}
-      %\draw[step=1,gray,thin] (-5,-5) grid (5,5);
       \draw[axis] (-5,0) -- (5,0) node[right] {$x$};
       \draw[axis] (0,-5) -- (0,5) node[above] {$y$};
       \node[dot] at (-2,0) {};
@@ -81,11 +80,11 @@
       \node at (4,.5) {$(3,0)$};
       \node[dot] at (2,-4) {};
       \node at (3.3,-4.2) {$(2,-4)$};
-      \node at (5.2,4) {$y=f(x)$};
+      \node at (5.2,5) {$y=f(x)$};
     \end{tikzpicture}
   \end{center}
   \newpage
-  \item 假設坐標平面的 $x$ 軸正向朝右，$y$ 軸正向朝上。已知 $A$、$B$ 兩動點目前分別位於 $(0,10)$ 與 $(0,-10)$，且 $A$、$B$ 兩點持續進行等速度運動，$A$ 點每秒朝右方移動 $3$ 單位，$B$ 點每秒朝上方移動 $4$ 單位。
+  \item 假設坐標平面的 $x$ 軸正向朝右，$y$ 軸正向朝上。已知 $A$、$B$ 兩動點目前分別位於 $(0,10)$ 與 $(0,-10)$，且 $A$、$B$ 兩點持續進行等速度運動，$A$ 點每秒向右移動 $3$ 單位，$B$ 點每秒向上移動 $4$ 單位。
   \begin{enumerate}[label=(\arabic*),left=0pt]
     \item 在 \blank{5em} 秒後兩動點間的距離會最短。
     \item 兩動點間的最短距離為 \blank{5em} 單位。
