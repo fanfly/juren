@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=105mm,paperheight=148mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
+\usepackage{fontspec}
+\usepackage[PunctStyle=plain]{xeCJK}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{xeCJKfntef}
+\usepackage{pgfplots}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+
+%\pretolerance=5000
+%\tolerance=9000
+\emergencystretch=10pt
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\cfoot{\footnotesize\thepage\ /\ \pageref{LastPage}}
+\setlength{\parindent}{0pt}
+\setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
+\linespread{1.15}
+
+\usepackage{tabto}
+\newenvironment{choice}{\begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em,topsep=0ex,itemsep=0ex]}{\end{enumerate}}
+%\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+
+\newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
+\newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\sfraction}[2]{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\tfrac{#1}{#2}}
+
+\usepackage{titlesec}
+\usepackage{zhnumber}
+\titleformat{\section}{\normalfont\bfseries}{{\thesection}、}{0em}{}
+\titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
+\renewcommand{\thesection}{\zhnum{section}}
+
+\makeatletter
+\renewcommand*{\maketitle}{{%
+  \bfseries
+  \LARGE 練習（統計） \\
+  \large 離散型隨機變數、連續型隨機變數 \par
+}}
+\makeatother
+
+\begin{document}
+\maketitle
+\medskip
+答案位於第 \pageref{answer} 頁。
+\begin{enumerate}[label=\arabic*.,align=left,leftmargin=*,labelsep=.5em]
+  \item Assume that binomial distribution applies, the sample size is 4, and the probability of success is 0.8.
+  Find the following probabilities.
+  \begin{enumerate}[label=(\alph*),left=0pt,widest=a,topsep=0ex]
+    \item The probability of exactly 2 successes.
+    \item The probability of 3 or more successes.
+  \end{enumerate}
+  \newpage
+  \item Assume that binomial distribution applies, the sample size is 150, and the probability of success is 0.6.
+  \begin{enumerate}[label=(\alph*),left=0pt,widest=a,topsep=0ex]
+    \item Find the expected value of the number of successes.
+    \item Find the standard deviation of the number of successes.
+  \end{enumerate}
+  \newpage
+  \item Customers arrive at a checkout counter in a department store according to a Poisson distribution
+  at an average of 1 per ten minutes.
+  During a given ten minutes, find the following probabilities.
+  \begin{enumerate}[label=(\alph*),left=0pt,widest=a,topsep=0ex]
+    \item The probability that exactly 1 customers arrive.
+    \item The probability that at least 2 customers arrive.
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+\label{answer}
+{\bfseries\large 答案 \par}
+\NumTabs{4}
+\begin{enumerate}[label=\arabic*.,align=left,leftmargin=*,labelsep=.3em]
+  \item
+  \begin{enumerate*}[label=(\alph*),itemjoin=\tab]
+    \item 0.1536
+    \item 0.8192
+  \end{enumerate*}
+  \item
+  \begin{enumerate*}[label=(\alph*),itemjoin=\tab]
+    \item 25
+    \item 6
+  \end{enumerate*}
+  \item
+  \begin{enumerate*}[label=(\alph*),itemjoin=\tab]
+    \item 0.3679
+    \item 0.2642
+  \end{enumerate*}
+\end{enumerate}
+\end{document}
