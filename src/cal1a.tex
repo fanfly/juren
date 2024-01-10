@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=105mm,paperheight=148mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
+\usepackage{fontspec}
+\usepackage[PunctStyle=plain]{xeCJK}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{xeCJKfntef}
+\usepackage{pgfplots}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+
+\pretolerance=5000
+\tolerance=9000
+\emergencystretch=10pt
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\cfoot{\footnotesize\thepage\ /\ \pageref{LastPage}}
+\setlength{\parindent}{0pt}
+\setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
+\linespread{1.15}
+
+\usepackage{tabto}
+\newenvironment{choice}{\begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em,topsep=0ex,itemsep=0ex]}{\end{enumerate}}
+%\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+
+\newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
+\newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\sfraction}[2]{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\tfrac{#1}{#2}}
+
+\usepackage{titlesec}
+\usepackage{zhnumber}
+\titleformat{\section}{\normalfont\bfseries}{{\thesection}、}{0em}{}
+\titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
+\renewcommand{\thesection}{\zhnum{section}}
+
+\makeatletter
+\renewcommand*{\maketitle}{{%
+  \bfseries
+  \LARGE 練習（微積分） \\
+  \large 極限、微分 \par
+}}
+\makeatother
+
+\begin{document}
+\maketitle
+\medskip
+答案位於第 \pageref{answer} 頁。
+\begin{enumerate}[label=\arabic*.,align=left,leftmargin=*,labelsep=.5em]
+  \item Evaluate the following limits.
+  \begin{enumerate}[label=(\alph*),left=0pt]
+    \item $\lim\limits_{x \to 3}\fraction{x^2-9}{x^2+2x-3}$.
+    \item $\lim\limits_{t \to 1} \fraction{t^3-1}{t^4-1}$.
+  \end{enumerate}
+  \item Find the derivatives.
+  \begin{enumerate}[label=(\alph*),left=0pt]
+    \item Let $f(x) = \biggl(\sqrt{x} + \fraction{1}{\sqrt[3]{x}}\biggr)^{\!\!2}$. Evaluate $f'(x)$.
+    \item Let $g(x) = \fraction{\sqrt{x}+x}{x^2}$. Evaluate $g'(x)$.
+  \end{enumerate}
+  \item Find the derivatives.
+  \begin{enumerate}[label=(\alph*),left=0pt]
+    \item Let $f(x) = \fraction{e^x}{1-e^x}$. Evaluate $f'(x)$.
+    \item Let $g(x) = \fraction{x+1}{x^3+x-2}$. Evaluate $g'(x)$.
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+\label{answer}
+{\bfseries\large 答案 \par}
+\NumTabs{2}
+\begin{enumerate}[label=\arabic*.,align=left,leftmargin=*,labelsep=.3em]
+  \item
+  \begin{enumerate*}[label=(\alph*),itemjoin=\tab]
+    \item $\fraction{3}{2}$
+    \item $\fraction{3}{4}$
+  \end{enumerate*}
+  \item
+  \begin{enumerate*}[label=(\alph*),itemjoin=\tab]
+    \item $1+\fraction{1}{3x^{5/6}}-\fraction{2}{3x^{5/3}}$
+    \item $\fraction{-3}{2x^{5/2}} - \fraction{1}{x^2}$
+  \end{enumerate*}
+  \item
+  \begin{enumerate*}[label=(\alph*),itemjoin=\tab]
+    \item $\fraction{e^x}{(1-e^x)^2}$
+    \item $\fraction{-2x^3-3x^2-3}{(x^3+x-2)^2}$
+  \end{enumerate*}
+\end{enumerate}
+\end{document}
