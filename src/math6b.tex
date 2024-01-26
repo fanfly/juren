@@ -1,0 +1,113 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=105mm,paperheight=148mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
+\usepackage{fontspec}
+\usepackage[PunctStyle=plain]{xeCJK}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{xeCJKfntef}
+\usepackage{pgfplots}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+
+\pretolerance=5000
+\tolerance=9000
+\emergencystretch=10pt
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\cfoot{\footnotesize\thepage\ /\ \pageref{LastPage}}
+\setlength{\parindent}{0pt}
+\setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
+\linespread{1.15}
+
+\usepackage{tabto}
+\newenvironment{choice}{\begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em,topsep=0ex,itemsep=0ex]}{\end{enumerate}}
+%\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+
+\newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
+\newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\sfraction}[2]{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\tfrac{#1}{#2}}
+
+\usepackage{titlesec}
+\usepackage{zhnumber}
+\titleformat{\section}{\normalfont\bfseries}{{\thesection}、}{0em}{}
+\titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
+\renewcommand{\thesection}{\zhnum{section}}
+
+\makeatletter
+\renewcommand*{\maketitle}{{%
+  \bfseries
+  \LARGE 練習（數學） \\
+  \large 直角三角形的三角比 \par
+}}
+\makeatother
+
+\begin{document}
+\maketitle
+\medskip
+第 \pageref{hint} 頁設有提示，答案位於第 \pageref{answer} 頁。
+\section{填充題（共 3 題）}
+\begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.3em]
+  \item 已知 $0^\circ < \alpha < 90^\circ$，且 $\sin\alpha = \fraction{1}{7}$。則：
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item $\cos\alpha = \blank{5em}$。（化為最簡根式）
+    \item $\tan\alpha = \blank{5em}$。（化為最簡根式）
+  \end{enumerate}
+  \newpage
+  \item 已知 $0^\circ < \theta < 90^\circ$，且 $\sin\theta + \cos\theta = \fraction{23}{17}$。則：
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item $\sin\theta \cdot \cos\theta = \blank{5em}$。
+    \item $\sin\theta - \cos\theta = \blank{5em}$。
+    \item 若 $\theta < 45^\circ$，則 $\sin\theta - \cos\theta = \blank{5em}$。
+  \end{enumerate}
+  \newpage
+  \item 試求 $\sin^2 40^\circ + \sin^2 50^\circ + \sin^2 60^\circ = \blank{5em}$。
+\end{enumerate}
+
+\newpage
+\label{hint}
+{\bfseries\large 提示 \par}
+\setcounter{section}{0}
+\section{填充題}
+\begin{enumerate}[label=\Alph*.,left=0pt]
+  \item
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item 利用平方關係：$\sin^2\alpha + \cos^2\alpha = 1$。
+    \item 利用商數關係：$\tan \alpha = \fraction{\sin\alpha}{\cos\alpha}$。
+  \end{enumerate}
+  \item
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item 觀察 $(\sin \theta + \cos \theta)^2$ 的展開式，並利用平方關係 $\sin^2\theta + \cos^2\theta = 1$。
+    \item 觀察 $(\sin \theta - \cos \theta)^2$ 的展開式，並利用平方關係 $\sin^2\theta + \cos^2\theta = 1$。
+    \item $\theta < 45^\circ$ 時，$\sin\theta < \fraction{1}{\sqrt{2}}$，且 $\cos\theta > \fraction{1}{\sqrt{2}}$。
+  \end{enumerate}
+  \item 先計算 $\sin^240^\circ+\sin^250^\circ$，利用餘角關係與平方關係可以求得其值。接著計算 $\sin^260^\circ$ 即可。
+\end{enumerate}
+
+\newpage
+\label{answer}
+{\bfseries\large 答案 \par}
+\setcounter{section}{0}
+\section{填充題}
+\begin{enumerate}[label=\Alph*.,left=0pt]
+  \item
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item $\fraction{4\sqrt{3}}{7}$
+    \item $\fraction{\sqrt{3}}{12}$
+  \end{enumerate}
+  \item
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item $\fraction{120}{289}$
+    \item $\pm\fraction{7}{17}$
+    \item $-\fraction{7}{17}$
+  \end{enumerate}
+  \item $\fraction{7}{4}$
+\end{enumerate}
+\end{document}
