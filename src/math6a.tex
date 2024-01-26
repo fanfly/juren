@@ -45,7 +45,7 @@
 \renewcommand*{\maketitle}{{%
   \bfseries
   \LARGE 練習（數學） \\
-  \large 直角三角形的邊角關係 \par
+  \large 直角三角形的三角比 \par
 }}
 \makeatother
 
@@ -53,11 +53,11 @@
 \maketitle
 \medskip
 第 \pageref{hint} 頁設有提示，答案位於第 \pageref{answer} 頁。
-\section{填充題（共 2 題）}
+\section{填充題（共 3 題）}
 \begin{enumerate}[label=\Alph*.,align=left,leftmargin=*,labelsep=.3em]
-  \item 如圖，在 $\triangle ABC$ 中，$\angle C = 90^\circ$，且 $\overline{AB} = 25$，$\overline{AC} = 24$。則 $\sin \angle A = \blank{5em}$，$\cos \angle A = \blank{5em}$，$\tan \angle A = \blank{5em}$。
+  \item 在 $\triangle ABC$ 中，$\angle C = 90^\circ$，$\overline{AB} = 25$，$\overline{AC} = 24$，如下圖所示。則 $\sin \angle A = \blank{5em}$，$\cos \angle A = \blank{5em}$，$\tan \angle A = \blank{5em}$。
   \begin{center}
-    \begin{tikzpicture}[scale=1.5]
+    \begin{tikzpicture}
       \coordinate (A) at (0,0);
       \coordinate (B) at (5,0);
       \coordinate (C) at (4.608,1.344);
@@ -68,25 +68,28 @@
     \end{tikzpicture}
   \end{center}
   \newpage
-  \item 如圖，在 $\triangle ABC$ 中，$\angle B = 15^\circ$，$\angle C = 90^\circ$，且 $\overline{AC} = 1$。在 $\overline{BC}$ 上找一點 $D$，使 $\angle ADC = 30^\circ$。
+  \item 若 $\tan\theta = \fraction{\sqrt{3}}{3}$ 且 $\theta$ 為一銳角，則 $\theta = \blank{5em}$ 度。
+  \newpage
+  \item 在 $\triangle ABC$ 中，$\sin \angle A = \fraction{12}{13}$，且 $\overline{AB} = 14$，$\overline{AC} = 13$，如下圖所示。
   \begin{enumerate}[label=(\arabic*),left=0pt]
-    \item $\overline{CD} = \blank{4em}$，$\overline{AD} = \blank{4em}$。
-    \item $\angle BAD = \blank{4em}$，故 $\overline{BD} = \blank{4em}$。
-    \item $\overline{AB}^2 = \blank{8em}$。（化為最簡根式）
-    \item $\overline{AB} = \blank{8em}$。（化為最簡根式）
-    \item $\sin 15^\circ = \fraction{\overline{AC}}{\overline{AB}} = \blank{8em}$。（化為最簡根式）
+    \item 設 $D$ 點在 $\overline{AB}$ 上，使 $\overline{CD}$ 與 $\overline{AB}$ 垂直，則 $\overline{CD} = \blank{5em}$。
+    \item 設 $E$ 點在 $\overline{AC}$ 上，使 $\overline{BE}$ 與 $\overline{AC}$ 垂直，則 $\overline{BE} = \blank{5em}$。
+    \item $\triangle ABC\,\text{面積} = \blank{5em}$。
   \end{enumerate}
   \begin{center}
     \begin{tikzpicture}
-      \coordinate (A) at (0,2);
-      \coordinate (B) at (-7.464,0);
-      \coordinate (C) at (0,0);
-      \coordinate (D) at (-3.464,0);
-      \node[shift={(.2,.2)}] at (A) {$A$};
-      \node[shift={(-.2,-.2)}] at (B) {$B$};
-      \node[shift={(.2,-.2)}] at (C) {$C$};
-      \node[shift={(0,-.2)}] at (D) {$D$};
-      \draw (A) -- (B) -- (C) -- (A) -- (D);
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (5.6,0);
+      \coordinate (C) at (2,4.8);
+      \coordinate (D) at (2,0);
+      \coordinate (E) at (0.828,1.988);
+      \node[shift={(-.3,-.2)}] at (A) {$A$};
+      \node[shift={(.3,-.2)}] at (B) {$B$};
+      \node[shift={(0,.3)}] at (C) {$C$};
+      \node[shift={(0,-.3)}] at (D) {$D$};
+      \node[shift={(-.3,0)}] at (E) {$E$};
+      \draw (A) -- (B) -- (C) -- (A);
+      \draw[dashed] (C) -- (D) (B) -- (E);
     \end{tikzpicture}
   \end{center}
 \end{enumerate}
@@ -98,13 +101,12 @@
 \section{填充題}
 \begin{enumerate}[label=\Alph*.,left=0pt]
   \item $\overline{AB}$ 是直角 $\triangle ABC$ 的斜邊。故 $\sin \angle A = \fraction{\overline{BC}}{\overline{AB}}$，$\cos \angle A = \fraction{\overline{AC}}{\overline{AB}}$，$\tan \angle A = \fraction{\overline{BC}}{\overline{AC}}$。
+  \item 作一直角三角形使兩股的比為 $\sqrt{3}:3$，並觀察三邊長的比例。
   \item
   \begin{enumerate}[label=(\arabic*),left=0pt]
-    \item 利用 $\triangle ACD$ 中 $30^\circ$–$60^\circ$–$90^\circ$ 的關係。
-    \item $\triangle ABD$ 是等腰三角形。
-    \item 畢式定理。
-    \item 需要處理雙重根號：先化為 $\sqrt{p+2\sqrt{q}}$ 的形式，接著找到 $a$ 和 $b$ 使得 $a+b=p$ 與 $ab=q$，即有 $\sqrt{p+2\sqrt{q}} = \sqrt{a} + \sqrt{b}$。
-    \item 直接計算即可，需要有理化分母。
+    \item 利用 $\triangle ACD$ 中的三角比：$\sin \angle A = \fraction{\overline{CD}}{\overline{AC}}$。
+    \item 利用 $\triangle ABE$ 中的三角比：$\sin \angle A = \fraction{\overline{BE}}{\overline{AB}}$。
+    \item 底乘以高除以 2。
   \end{enumerate}
 \end{enumerate}
 
@@ -115,13 +117,12 @@
 \section{填充題}
 \begin{enumerate}[label=\Alph*.,left=0pt]
   \item $\fraction{7}{25}$；$\fraction{24}{25}$；$\fraction{7}{24}$
+  \item 30
   \item
   \begin{enumerate}[label=(\arabic*),left=0pt]
-    \item $\sqrt{3}$；$2$
-    \item $15^\circ$；$2$
-    \item $8+4\sqrt{3}$
-    \item $\sqrt{2}+\sqrt{6}$
-    \item $\fraction{-\sqrt{2}+\sqrt{6}}{4}$
+    \item 12
+    \item $\fraction{168}{13}$
+    \item 84
   \end{enumerate}
 \end{enumerate}
 \end{document}
