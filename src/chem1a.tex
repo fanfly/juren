@@ -1,0 +1,67 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=182mm,paperheight=128mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
+\usepackage{fontspec}
+\usepackage[PunctStyle=plain]{xeCJK}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{xeCJKfntef}
+\usepackage{pgfplots}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+
+\pretolerance=5000
+\tolerance=9000
+\emergencystretch=10pt
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
+\linespread{1.15}
+
+\usepackage{tabto}
+\newenvironment{choice}{\begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em,topsep=0ex,itemsep=0ex]}{\end{enumerate}}
+%\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+
+\newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
+\newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\sfraction}[2]{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\tfrac{#1}{#2}}
+
+\usepackage{titlesec}
+\usepackage{zhnumber}
+\titleformat{\section}{\normalfont\bfseries}{{\thesection}、}{0em}{}
+\titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
+\renewcommand{\thesection}{\zhnum{section}}
+
+\makeatletter
+\renewcommand*{\maketitle}{{%
+  \bfseries
+  \Large 週期表 \par
+}}
+\makeatother
+
+\newcommand*{\chemfamily}[2]{{\begin{tabular}{@{}c@{}}#1\\[-3ex]{\scriptsize(#2)}\end{tabular}}}
+\newcommand*{\chemelem}[4]{{\begin{tabular}{@{}c@{}}#1\\[-2.5ex]{\footnotesize#2}\\[-2.75ex]{\scriptsize$#3\,(#4)$}\end{tabular}}}
+\newcommand*{\chemperiod}[1]{{\begin{tabular}{@{}c@{}}第#1\\[-2ex]週期\end{tabular}}}
+
+\begin{document}
+%\maketitle
+\vspace*{\fill}
+\begin{table}[h!]
+  \centering
+  \renewcommand*{\arraystretch}{1.5}
+  \begin{tabular}{|c|*{8}{>{\centering\arraybackslash}p{1.4cm}|}}
+    \hline
+    族 & \chemfamily{1}{IA} & \chemfamily{2}{IIA} & \chemfamily{13}{IIIA} & \chemfamily{14}{IVA} & \chemfamily{15}{VA} & \chemfamily{16}{VIA} & \chemfamily{17}{VIIA} & \chemfamily{18}{VIIIA} \\ \hline
+    \chemperiod{一} & \chemelem{氫}{H}{1}{1} & & & & & & & \chemelem{氦}{He}{2}{2} \\ \hline
+    \chemperiod{二} & \chemelem{鋰}{Li}{3}{2,1} & \chemelem{鈹}{Be}{4}{2,2} & \chemelem{硼}{B}{5}{2,3} & \chemelem{碳}{C}{6}{2,4} & \chemelem{氮}{N}{7}{2,5} & \chemelem{氧}{O}{8}{2,6} & \chemelem{氟}{F}{9}{2,7} & \chemelem{氖}{Ne}{10}{2,8} \\ \hline
+    \chemperiod{三} & \chemelem{鈉}{Na}{11}{2,8,1} & \chemelem{鎂}{Mg}{12}{2,8,2} & \chemelem{鋁}{Al}{13}{2,8,3} & \chemelem{矽}{Si}{14}{2,8,4} & \chemelem{磷}{P}{15}{2,8,5} & \chemelem{硫}{S}{16}{2,8,6} & \chemelem{氯}{Cl}{17}{2,8,7} & \chemelem{氬}{Ar}{18}{2,8,8} \\ \hline
+  \end{tabular}
+\end{table}
+\vspace*{\fill}
+\end{document}
