@@ -1,0 +1,101 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=105mm,paperheight=148mm,hmargin=1cm,top=1cm,bottom=1.75cm]{geometry}
+\usepackage{fontspec}
+\usepackage[PunctStyle=plain]{xeCJK}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{xeCJKfntef}
+\usepackage{pgfplots}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+
+\pretolerance=5000
+\tolerance=9000
+\emergencystretch=10pt
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\cfoot{\footnotesize\thepage\ /\ \pageref{LastPage}}
+\setlength{\parindent}{0pt}
+\setCJKmainfont[BoldFont=Noto Serif CJK TC SemiBold]{Noto Serif CJK TC}
+\linespread{1.15}
+
+\usepackage{tabto}
+\newenvironment{choice}{\begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em,topsep=0ex,itemsep=0ex]}{\end{enumerate}}
+%\newenvironment{choices}[1]{\par\NumTabs{#1}\begin{enumerate*}[label=(\Alph*),itemjoin=\tab]}{\end{enumerate*}}
+
+\newcommand*{\blank}[1]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\fbox{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\hspace{#1}}}
+\newcommand*{\fraction}[2]{\rule[-.8\baselineskip]{0pt}{2\baselineskip}\dfrac{#1}{#2}}
+\newcommand*{\sfraction}[2]{\rule[-.4\baselineskip]{0pt}{1.2\baselineskip}\tfrac{#1}{#2}}
+
+\usepackage{titlesec}
+\usepackage{zhnumber}
+\titleformat{\section}{\normalfont\bfseries}{{\thesection}、}{0em}{}
+\titlespacing{\section}{0pt}{2ex plus .5ex minus .2ex}{1.3ex plus .2ex}
+\renewcommand{\thesection}{\zhnum{section}}
+
+\makeatletter
+\renewcommand*{\maketitle}{{%
+  \bfseries
+  \LARGE 練習（數學） \\
+  \large 排列、組合 \par
+}}
+\makeatother
+
+\begin{document}
+\maketitle
+\medskip
+共有 3 題。答案位於第 \pageref{answer} 頁。
+\section{選擇題}
+\begin{enumerate}[label=\arabic*.,align=left,leftmargin=*,labelsep=.3em]
+  \item 下列敘述何者正確？（多選）
+  \begin{enumerate}[label=(\Alph*),align=left,leftmargin=*,labelsep=.3em]
+    \item $C^6_0 + C^6_1 + C^6_2 + C^6_3 + C^6_4 + C^6_5 + C^6_6 = 64$
+    \item $C^6_0 - C^6_1 + C^6_2 - C^6_3 + C^6_4 - C^6_5 + C^6_6 = 0$
+    \item $C^6_0 - \fraction{C^6_1}{2} + \fraction{C^6_2}{2^2} - \fraction{C^6_3}{2^3} + \fraction{C^6_4}{2^4} - \fraction{C^6_5}{2^5} + \fraction{C^6_6}{2^6} = \fraction{-1}{64}$
+    \item $(1-x)^6$ 的展開式中，$x^3$ 項的係數為 $20$
+    \item $\biggl(x^2-\fraction{1}{2}\biggr)^{\mkern-4mu6}$ 的展開式中，$x^6$ 項的係數為 $\fraction{-5}{2}$
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\section{填充題}
+\begin{enumerate}[label=\arabic*.,align=left,leftmargin=*,labelsep=.3em,start=2]
+  \item 甲、乙、丙、丁、戊、己、庚、辛、壬共 9 人想進行三對三的籃球比賽，因此打算要分成三隊，每隊各 3 人。
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.3em]
+    \item 共有 $\blank{4em}$ 種分隊方法。
+    \item 若甲、乙要在不同隊，則會有 $\blank{4em}$ 種分隊方法。
+  \end{enumerate}
+  \newpage
+  \item 今要將 1、2、3、4、5、6、7、8、9 等 9 個數字排成（數字不重複的）九位數。
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.3em]
+    \item 若要使數字是奇數的位數均不相鄰，則有 $\blank{4em}$ 個滿足條件的九位數。
+    \item 若要使九位數當中的前五位數由左至右遞增，且後五位數由左至右遞減，則有 $\blank{4em}$ 個滿足條件的九位數。
+  \end{enumerate}
+\end{enumerate}
+
+\newpage
+\label{answer}
+{\bfseries\large 答案 \par}
+\begin{enumerate}[label=\arabic*.,left=0pt]
+  \item (A)(B)(E)
+  \item
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.3em]
+    \item 280
+    \item 210
+  \end{enumerate}
+  \item
+  \begin{enumerate}[label=(\arabic*),align=left,leftmargin=*,labelsep=.3em]
+    \item 2880
+    \item 70
+  \end{enumerate}
+\end{enumerate}
+\end{document}
